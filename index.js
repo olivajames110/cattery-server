@@ -3,11 +3,12 @@ const socketio = require('socket.io');
 const http = require('http');
 
 // const PORT = process.env.PORT || 5000;
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 'https://git.heroku.com/cattery-server.git';
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+console.log(process.env.PORT);
 
 let SERVER_PARTY = [
 	{
